@@ -1,0 +1,19 @@
+Define the Recurrence Relation
+For merging two sorted lists of size n and m:
+T(n+m)=T(n+m−1)+O(1)T(n + m) = T(n + m - 1) + O(1)T(n+m)=T(n+m−1)+O(1)
+Where:
+T(n + m) = time to merge  the two lists
+T(n + m - 1) = after 1 comparison
+O(1)  =  constant time for insertion and comparison
+
+ Base case = T(0)=0T(0) = 0T(0)=0
+
+Expanding the recurrence relation = 
+T(n+m)=T(n+m−1)+O(1)T(n + m) = T(n + m - 1) + O(1)T(n+m)=T(n+m−1)+O(1) T(n+m−1)=T(n+m−2)+O(1)T(n + m - 1) = T(n + m - 2) + O(1)T(n+m−1)=T(n+m−2)+O(1) T(n+m−2)=T(n+m−3)+O(1)T(n + m - 2) = T(n + m - 3) + O(1)T(n+m−2)=T(n+m−3)+O(1) 
+ Therefore T(1)=T(0)+O(1)T(1) = T(0) + O(1)T(1)=T(0)+O(1)
+T(n+m)=T(0)+O(1)+O(1)+⋯+O(1)T(n + m) = T(0) + O(1) + O(1) + O(1)T(n+m)=T(0)+O(1)+O(1)+⋯+O(1)
+Since there are n + m terms of O(1):
+T(n+m)=O(n+m)T(n + m) = O(n + m)T(n+m)=O(n+m)
+
+Answer = T(n+m)=O(n+m)T(n + m) = O(n + m)T(n+m)=O(n+m)
+
